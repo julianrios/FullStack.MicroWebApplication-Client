@@ -9,9 +9,7 @@
     </thead>
     <tbody>
             <tr>
-                <tr *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
-                    (click)="onSelect(profile)">
-                    <span class="badge"></span> 
+                <tr *ngFor= "let profile of profiles">
                 <td>{{profile.id}} </td>
               <td>{{profile.name}}</td>
             </tr>
