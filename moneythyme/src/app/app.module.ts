@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     ProfileComponent,
     NavbarComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
