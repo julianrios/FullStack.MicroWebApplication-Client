@@ -11,7 +11,7 @@ private profileUrl = 'https://moneythyme.herokuapp.com/profiles';
   constructor(private http: HttpClient) { }
 
 getProfile(id: number): Observable<Profile> {
-  const url = `${this.profileUrl}/?id=${id}`
+  const url = `${this.profileUrl}/${id}`
     return this.http.get<Profile>(url);
 }
 

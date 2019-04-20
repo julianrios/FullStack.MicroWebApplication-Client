@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Profile } from '../profile';
 import { ProfileService } from '../profile/profile.service';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'profiles',
@@ -10,14 +12,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./profile-detail.component.css']
 })
 export class ProfileDetailComponent implements OnInit {
-  // @Input() profile: Profile;
+  @Input() profile: Profile;
+  profileUrl: 'https://moneythyme.herokuapp.com/profiles';
 
-  profile: Profile;
+  // profile: Profile;
 
   constructor(
     private profileService : ProfileService,
     private route: ActivatedRoute,
-    // private location: Location,
+    private location: Location,
     ) { }
 
   ngOnInit() {
@@ -26,5 +29,10 @@ export class ProfileDetailComponent implements OnInit {
   private getProfile() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.profileService.getProfile(id).subscribe(profile => this.profile = profile);
+  }
+
+  goBack(): void {
+    const url = `${this.profileUrl}`
+    this.location.go(url);
   }
 }
