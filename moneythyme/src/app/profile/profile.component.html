@@ -1,4 +1,6 @@
-<table class="table table-hover">
+<div class="container">
+<h2 class=display-4>Profiles</h2>
+<table class="table table-hover table-striped">
     <thead>
         <tr>
             <th scope="col">ID</th>
@@ -6,20 +8,12 @@
         </tr>
     </thead>
     <tbody>
-            <tr class="table-light">
-                    <tr *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
+            <tr>
+                <tr *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
                     (click)="onSelect(profile)">
-                    <span class="badge"></span> {{profile.name}} 
-              <td *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
-              (click)="onSelect(profile)">
-              <span class="badge">{{profile.id}}>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
+                    <span class="badge"></span> 
+                <td>{{profile.id}} </td>
+              <td>{{profile.name}}</td>
             </tr>
 </table>
-<!-- <ul>
-    <tr *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
-    (click)="onSelect(hero)">
-<span class="badge">{{profile.id}}</span> {{profile.name}}    
-</li>
-</ul> -->
+</div>
