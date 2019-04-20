@@ -1,4 +1,3 @@
-<h2>{{profile.name | uppercase}} Details</h2>
 <ul>
     <li *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
     (click)="onSelect(hero)">
@@ -6,5 +5,3 @@
 </li>
 
 </ul>
-<div><span>id: </span>{{profile.id}}</div>
-<div><span>Name: </span>{{profile.name}}</div>
