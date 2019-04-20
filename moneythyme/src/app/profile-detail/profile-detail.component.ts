@@ -5,7 +5,7 @@ import { ProfileService } from '../profile/profile.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-profile-detail',
+  selector: 'profiles',
   templateUrl: './profile-detail.component.html',
   styleUrls: ['./profile-detail.component.css']
 })
@@ -17,7 +17,7 @@ export class ProfileDetailComponent implements OnInit {
   constructor(
     private profileService : ProfileService,
     private route: ActivatedRoute,
-    private location: Location,
+    // private location: Location,
     ) { }
 
   ngOnInit() {

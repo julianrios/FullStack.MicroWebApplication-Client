@@ -8,7 +8,7 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
 const routes: Routes = [
   {path: 'profiles', component: ProfileComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'profile/:id', component: ProfileDetailComponent}
+  {path: 'profiles/:id', component: ProfileDetailComponent}
 ];
 
 @NgModule({
