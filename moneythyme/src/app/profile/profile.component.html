@@ -10,7 +10,10 @@
     <tbody>
             <tr>
                 <tr *ngFor= "let profile of profiles">
-                <td>{{profile.id}} </td>
+                <a routerLink="/profiles/{{profile.id}}">
+                    <td>{{profile.id}}</td>
+                </a>
+                <!-- <td>{{profile.id}} </td> -->
               <td>{{profile.name}}</td>
             </tr>
 </table>

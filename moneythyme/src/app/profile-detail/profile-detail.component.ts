@@ -31,6 +31,6 @@ export class ProfileDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    [RouterLink] = "[`/profiles`]"
+    // [RouterLink] = "/profiles";
   }
 }
