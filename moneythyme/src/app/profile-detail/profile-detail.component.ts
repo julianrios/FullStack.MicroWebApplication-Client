@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Profile } from '../profile';
 import { ProfileService } from '../profile/profile.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
 
 
@@ -13,7 +13,6 @@ import { Location } from '@angular/common';
 })
 export class ProfileDetailComponent implements OnInit {
   @Input() profile: Profile;
-  profileUrl: 'https://moneythyme.herokuapp.com/profiles';
 
   // profile: Profile;
 
@@ -32,7 +31,6 @@ export class ProfileDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    const url = `${this.profileUrl}`
-    this.location.go(url);
+    [RouterLink] = "[`/profiles`]"
   }
 }

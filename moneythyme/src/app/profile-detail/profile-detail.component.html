@@ -1,5 +1,5 @@
 <div *ngIf= "profile">
   <h2>{{profile.name}} Details</h2>
   <div><span>id:</span>{{profile.id}}</div>
-  <button (click)="goBack()">go back</button>
+  <button routerLink="/profiles">go back</button>
 </div>
