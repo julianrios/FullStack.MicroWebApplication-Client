@@ -7,14 +7,16 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ProfileService {
-private profileUrl = 'https://moneythyme.herokuapp.com/profiles/allProfiles';
+private profileUrl = 'https://moneythyme.herokuapp.com/profiles';
   constructor(private http: HttpClient) { }
 
-getProfile(): Observable<Profile> {
-    return this.http.get<Profile>(this.profileUrl);
+getProfile(id: number): Observable<Profile> {
+  const url = `${this.profileUrl}/?id=${id}`
+    return this.http.get<Profile>(url);
 }
 
 getProfiles(): Observable<Profile[]>{
-    return this.http.get<Profile[]>(this.profileUrl);
+  const url = `${this.profileUrl}/allProfiles`
+    return this.http.get<Profile[]>(url);
 }
 }
