@@ -9,8 +9,10 @@
             <tr class="table-light">
                     <tr *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
                     (click)="onSelect(profile)">
-                    <span class="badge">{{profile.id}}</span> {{profile.name}} 
-              <td>Column content</td>
+                    <span class="badge"></span> {{profile.name}} 
+              <td *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
+              (click)="onSelect(profile)">
+              <span class="badge">{{profile.id}}>Column content</td>
               <td>Column content</td>
               <td>Column content</td>
             </tr>
