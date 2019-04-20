@@ -5,20 +5,23 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
-import { Profile } from './profile/profile';
-import { ProfileServiceService } from './profile/profile-service.service';
+import { HttpClientModule} from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule.forRoot()
   ],
-  providers: [Profile,ProfileServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
