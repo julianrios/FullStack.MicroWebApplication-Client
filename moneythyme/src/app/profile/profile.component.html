@@ -1,7 +1,23 @@
-<ul>
-    <li *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Profile name</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr class="table-light">
+                    <tr *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
+                    (click)="onSelect(profile)">
+                    <span class="badge">{{profile.id}}</span> {{profile.name}} 
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+</table>
+<!-- <ul>
+    <tr *ngFor= "let profile of profiles" [class.selected]="profile === selectedProfile"
     (click)="onSelect(hero)">
 <span class="badge">{{profile.id}}</span> {{profile.name}}    
 </li>
-
-</ul>
+</ul> -->
