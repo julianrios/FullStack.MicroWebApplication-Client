@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import {ProfileComponent} from './profile/profile.component';
 import {AboutComponent} from './about/about.component';
 import {NavbarComponent} from './navbar/navbar.component';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 
 const routes: Routes = [
   {path: 'profiles', component: ProfileComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'profile/:id', component: ProfileDetailComponent}
 ];
 
 @NgModule({
