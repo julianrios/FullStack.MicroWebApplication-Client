@@ -28,4 +28,8 @@ export class AccountDetailsComponent implements OnInit {
     this.accountService.getAccount(id).subscribe(account => this.account = account);
   }
 
+  private deposit(amount: number){
+  this.accountService.deposit(this.account.id,document.getElementById("depositAmount"))
+  }
+
 }

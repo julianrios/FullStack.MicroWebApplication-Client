@@ -19,4 +19,9 @@ export class AccountService {
     const url = `${this.profileUrl}/all/${profile_id}`
     return this.http.get<Account[]>(url);
   }
+
+  deposit(id: number,amount: any){
+    const url = `${this.profileUrl}/deposit/${id}/${amount}`
+    this.http.put(url,null);
+  }
 }
