@@ -17,9 +17,9 @@ export class ProfileDetailComponent implements OnInit {
   // profile: Profile;
 
   constructor(
-    private profileService : ProfileService,
+    private profileService: ProfileService,
     private route: ActivatedRoute,
-    private location: Location,
+    // private location: Location,
     ) { }
 
   ngOnInit() {
@@ -28,9 +28,5 @@ export class ProfileDetailComponent implements OnInit {
   private getProfile() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.profileService.getProfile(id).subscribe(profile => this.profile = profile);
-  }
-
-  goBack(): void {
-    // [RouterLink] = "/profiles";
   }
 }
