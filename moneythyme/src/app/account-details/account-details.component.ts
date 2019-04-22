@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
+import {AccountService} from '../accounts/account.service';
+import {ActivatedRoute, RouterLink} from '@angular/router';
+import {Account} from '../account';
+import {Profile} from '../profile';
+
 
 @Component({
   selector: 'app-account-details',
@@ -6,10 +12,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-details.component.css']
 })
 export class AccountDetailsComponent implements OnInit {
+  @Input() accounts: Account;
 
-  constructor() { }
+  constructor(
+    private accountService: AccountService,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
+    this.getAccount();
+  }
+
+  private getAccount() {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.accountService.getAccount(id).subscribe(account => this.accounts = account);
   }
 
 }
