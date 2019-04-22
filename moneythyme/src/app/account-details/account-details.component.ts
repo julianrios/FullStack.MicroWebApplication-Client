@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {AccountService} from '../accounts/account.service';
+import {AccountService} from '../services/account.service';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Account} from '../account';
 import {Profile} from '../profile';
@@ -12,7 +12,7 @@ import {Profile} from '../profile';
   styleUrls: ['./account-details.component.css']
 })
 export class AccountDetailsComponent implements OnInit {
-  @Input() accounts: Account;
+  @Input() account: Account;
 
   constructor(
     private accountService: AccountService,
@@ -25,7 +25,11 @@ export class AccountDetailsComponent implements OnInit {
 
   private getAccount() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.accountService.getAccount(id).subscribe(account => this.accounts = account);
+    this.accountService.getAccount(id).subscribe(account => this.account = account);
+  }
+
+  private deposit(amount: number){
+  this.accountService.deposit(this.account.id,document.getElementById("depositAmount"))
   }
 
 }
