@@ -1,18 +1,18 @@
 <div *ngIf= "profile">
   <h2>{{profile.name}} Details</h2>
-  <div><span>id:</span>{{profile.id}}</div>
+  <div><span>Profile ID:</span>{{profile.id}}</div>
   <div class="container">
-    <h2 class=display-4>Profiles</h2>
+    <h2 class=display-4>Accounts</h2>
     <table class="table table-hover table-striped">
       <thead>
       <tr>
-        <th scope="col">ID</th>
+        <th scope="col">Account ID</th>
         <th scope="col">Account Balance</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-      <tr *ngFor= "let account of accounts" routerLink="profiles/accounts/{{profile.id}}">
+      <tr *ngFor= "let account of accounts">
         <td>{{account.id}}</td>
         <td>{{account.balance}}</td>
       </tr>
