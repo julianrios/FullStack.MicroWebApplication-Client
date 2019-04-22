@@ -7,21 +7,24 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class AccountService {
-  private profileUrl = 'https://moneythyme.herokuapp.com/accounts';
+  private accountUrl = 'https://moneythyme.herokuapp.com/accounts';
   constructor(private http: HttpClient) { }
 
   getAccount(id: number): Observable<Account> {
-    const url = `${this.profileUrl}/${id}`
+    const url = `${this.accountUrl}/${id}`
     return this.http.get<Account>(url);
   }
 
   getAccounts(profile_id: number): Observable<Account[]>{
-    const url = `${this.profileUrl}/all/${profile_id}`
+    const url = `${this.accountUrl}/all/${profile_id}`
     return this.http.get<Account[]>(url);
   }
 
-  deposit(id: number,amount: any){
-    const url = `${this.profileUrl}/deposit/${id}/${amount}`
-    this.http.put(url,null);
+  deposit(id: number,amount: number): Observable<Account>{
+    console.log('entered service');
+    const url = `${this.accountUrl}/deposit/${id}/${amount}`
+    console.log('exited service');
+   return this.http.put<Account>(url,[]);
+
   }
 }
