@@ -24,8 +24,8 @@ export class ProfileComponent implements OnInit {
     this.profileService.getProfiles().subscribe(data => this.profiles = data);
   }
 
-  private deleteProfile(profile: Profile) {
-    this.profiles = this.profiles.filter(p => p !== profile);
-    this.profileService.deleteProfile(profile).subscribe(profile => this.profile = profile);
+  private deleteProfile(id: number) {
+    this.profiles = this.profiles.filter(p => p.id !== id);
+    this.profileService.deleteProfile(id).subscribe();
   }
 }

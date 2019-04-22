@@ -18,8 +18,9 @@
       </tr>
     </table>
   </div>
-
-  <button routerLink="/profiles">go back</button>
-  <button class="delete" title="delete hero"
-  (click)="delete(profile)">x</button>
+  <div *ngFor= "let profile of profiles">
+  </div>
+    <button routerLink="/profiles">go back</button>
+    <button class="delete" title="delete hero" 
+    (click)="deleteProfile(profile.id)">Delete</button>
 </div>
