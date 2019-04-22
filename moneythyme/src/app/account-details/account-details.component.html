@@ -1,6 +1,48 @@
-<div *ngIf= "account">
-  <h2>{{account.id}} Details</h2>
-  <div><span>id:</span>{{account.id}}</div>
-  <div><span>balance:</span>{{account.balance}}</div>
-  <button type="button" class="btn btn-primary" routerLink="/profiles">go back</button>
+<div class="container" *ngIf= "account">
+<div class="jumbotron">
+  <h1 class="display-3">Account Number {{account.id}}:</h1>
+  <p class="lead">Account balance is: {{account.balance}}</p>
+  <hr class="my-4">
+  <p>Here you can withdraw from, and deposit to your account.</p>
+
+  <div class="row">
+    <div class="col-lg-4">
+    <div class="card text-white border-success mb-3" style="max-width: 20rem;">
+      <div class="card-header bg-success">Deposit</div>
+      <div class="card-body">
+        <h4 class="card-title text-success">Deposit how much?</h4>
+        <div class="form-group">
+          <input class="form-control form-control-sm" type="text" placeholder="Deposit" id="depositAmount">
+        </div>
+      </div>
+    </div>
+    </div>
+      <div class="col-lg-4">
+    <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+      <div class="card-header bg-secondary">Withdraw</div>
+      <div class="card-body">
+        <h4 class="card-title">Withdraw how much?</h4>
+        <div class="form-group">
+          <input class="form-control form-control-sm" type="text" placeholder="Withdraw" id="withdrawAmount">
+        </div>
+      </div>
+    </div>
+    </div>
+      <div class="col-lg-4">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+      <div class="card-header bg-primary">Transfer</div>
+      <div class="card-body">
+        <h4 class="card-title">Transfer how much?</h4>
+        <div class="form-group">
+          <input class="form-control form-control-sm" type="text" placeholder="Transfer" id="transferAmount">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" routerLink="/profiles" role="button">Go Back to Profiles</a>
+  </p>
+</div>
+
