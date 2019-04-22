@@ -2,4 +2,6 @@
   <h2>{{profile.name}} Details</h2>
   <div><span>id:</span>{{profile.id}}</div>
   <button routerLink="/profiles">go back</button>
+  <button class="delete" title="delete hero"
+  (click)="delete(profile)">x</button>
 </div>

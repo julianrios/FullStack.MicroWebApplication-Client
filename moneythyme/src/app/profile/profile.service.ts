@@ -19,4 +19,12 @@ getProfiles(): Observable<Profile[]>{
   const url = `${this.profileUrl}/allProfiles`
     return this.http.get<Profile[]>(url);
 }
+
+deleteProfile(profile: Profile | number): Observable<Profile> {
+  const id = typeof profile === 'number' ? profile : profile.id
+  const url = `${this.profileUrl}/${id}`
+  return this.http.delete<Profile>(url);
+}
+
+
 }

@@ -10,12 +10,10 @@ import { ProfileService} from './profile.service';
 export class ProfileComponent implements OnInit {
   profile: Profile;
   profiles: Profile[];
-  deletedProfile: Boolean;
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
     this.getProfiles();
-    this.deleteProfile();
   }
 
   // private getProfile() {
@@ -26,7 +24,8 @@ export class ProfileComponent implements OnInit {
     this.profileService.getProfiles().subscribe(data => this.profiles = data);
   }
 
-  private deleteProfile() {
-    this.profileService.deleteProfile().subscribe(profile => this.deletedProfile = profile);
+  private deleteProfile(profile: Profile) {
+    this.profiles = this.profiles.filter(p => p !== profile);
+    this.profileService.deleteProfile(profile).subscribe(profile => this.profile = profile);
   }
 }

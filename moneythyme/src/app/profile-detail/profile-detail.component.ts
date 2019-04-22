@@ -17,9 +17,9 @@ export class ProfileDetailComponent implements OnInit {
   // profile: Profile;
 
   constructor(
-    private profileService: ProfileService,
+    private profileService : ProfileService,
     private route: ActivatedRoute,
-    // private location: Location,
+    private location: Location,
     ) { }
 
   ngOnInit() {
@@ -28,5 +28,12 @@ export class ProfileDetailComponent implements OnInit {
   private getProfile() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.profileService.getProfile(id).subscribe(profile => this.profile = profile);
+  }
+
+  private deleteProfile(profile: Profile) {
+    const id = +this.route.snapshot.paramMap.get('id');
+
+    // this.profiles = this.profiles.filter(p => p !== profile);
+    this.profileService.deleteProfile(profile).subscribe(profile => this.profile = profile);
   }
 }
