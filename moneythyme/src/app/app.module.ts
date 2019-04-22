@@ -9,6 +9,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
     ProfileComponent,
     NavbarComponent,
     AboutComponent,
-    ProfileDetailComponent
+    ProfileDetailComponent,
+    AccountDetailsComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,
