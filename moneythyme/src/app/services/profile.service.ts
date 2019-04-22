@@ -13,12 +13,12 @@ export class ProfileService {
   }
 
   getProfile(id: number): Observable<Profile> {
-    const url = `${this.profileUrl}/${id}`
+    const url = `${this.profileUrl}/${id}`;
     return this.http.get<Profile>(url);
   }
 
   getProfiles(): Observable<Profile[]> {
-    const url = `${this.profileUrl}/allProfiles`
+    const url = `${this.profileUrl}/allProfiles`;
     return this.http.get<Profile[]>(url);
 }
 

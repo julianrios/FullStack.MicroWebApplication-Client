@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AccountService} from '../services/account.service';
 import {Profile} from '../profile';
 import {Account} from '../account';
@@ -12,7 +12,9 @@ export class AccountsComponent implements OnInit {
   account: Account;
   accounts: Account[];
   profile: Profile;
-  constructor(private accountService: AccountService) { }
+
+  constructor(private accountService: AccountService) {
+  }
 
   ngOnInit() {
     this.getAccounts();

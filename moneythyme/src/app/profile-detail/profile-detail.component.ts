@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
-import { Profile } from '../profile';
-import { ProfileService } from '../services/profile.service';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Location } from '@angular/common';
-import { Account } from '../account';
-import { AccountService} from '../services/account.service';
+import {Profile} from '../profile';
+import {ProfileService} from '../services/profile.service';
+import {ActivatedRoute, RouterLink} from '@angular/router';
+import {Location} from '@angular/common';
+import {Account} from '../account';
+import {AccountService} from '../services/account.service';
 
 
 @Component({
@@ -31,6 +31,7 @@ export class ProfileDetailComponent implements OnInit {
     this.getProfile();
     this.getAccounts();
   }
+
   private getProfile() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.profileService.getProfile(id).subscribe(profile => this.profile = profile);
@@ -40,7 +41,7 @@ export class ProfileDetailComponent implements OnInit {
     this.profileService.deleteProfile(id).subscribe(profile => this.profile = profile);
   }
 
-  private getAccounts() {
+private getAccounts() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.accountService.getAccounts(id).subscribe(account => this.accounts = account);
 

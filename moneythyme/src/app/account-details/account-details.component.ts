@@ -17,7 +17,8 @@ export class AccountDetailsComponent implements OnInit {
   constructor(
     private accountService: AccountService,
     private route: ActivatedRoute,
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
     this.getAccount();
@@ -28,8 +29,13 @@ export class AccountDetailsComponent implements OnInit {
     this.accountService.getAccount(id).subscribe(account => this.account = account);
   }
 
-  private deposit(amount: number){
-  this.accountService.deposit(this.account.id,document.getElementById("depositAmount"))
+  public deposit(amount: number) {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.accountService.deposit(id, amount).subscribe(account => this.account = account);
   }
 
+  public withdraw(amount: number) {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.accountService.withdraw(id, amount).subscribe(account => this.account = account);
+  }
 }
