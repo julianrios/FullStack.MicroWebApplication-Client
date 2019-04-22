@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 
 @NgModule({
@@ -14,6 +18,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     ProfileComponent,
     NavbarComponent,
+    AboutComponent,
+    ProfileDetailComponent,
+    AccountDetailsComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,

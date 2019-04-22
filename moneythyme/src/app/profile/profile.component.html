@@ -1,3 +1,17 @@
-<h2>{{profile.name | uppercase}} Details</h2>
-<div><span>id: </span>{{profile.id}}</div>
-<div><span>Name: </span>{{profile.name}}</div>
+<div class="container">
+<h2 class=display-4>Profiles</h2>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Profile name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <tr *ngFor= "let profile of profiles" routerLink="/profiles/{{profile.id}}">
+                <td>{{profile.id}}</td>
+            <td>{{profile.name}}</td>
+        </tr>
+</table>
+</div>

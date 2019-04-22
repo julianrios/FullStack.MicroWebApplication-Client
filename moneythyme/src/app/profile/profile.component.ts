@@ -9,13 +9,18 @@ import { ProfileService} from './profile.service';
 })
 export class ProfileComponent implements OnInit {
   profile: Profile;
+  profiles: Profile[];
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
-    this.getProfile();
+    this.getProfiles();
   }
 
-  private getProfile() {
-    this.profileService.getProfile().subscribe(profile => this.profile = profile);
+  // private getProfile() {
+  //   this.profileService.getProfile().subscribe(profile => this.profile = profile);
+  // }
+
+  private getProfiles() {
+    this.profileService.getProfiles().subscribe(data => this.profiles = data);
   }
 }
