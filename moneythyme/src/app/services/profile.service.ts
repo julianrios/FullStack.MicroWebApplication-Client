@@ -20,5 +20,11 @@ export class ProfileService {
   getProfiles(): Observable<Profile[]> {
     const url = `${this.profileUrl}/allProfiles`;
     return this.http.get<Profile[]>(url);
-  }
+}
+
+deleteProfile(id: number): Observable<Profile> {
+  const url = `${this.profileUrl}/${id}`
+  return this.http.delete<Profile>(url);
+}
+
 }

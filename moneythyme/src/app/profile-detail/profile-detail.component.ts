@@ -24,9 +24,8 @@ export class ProfileDetailComponent implements OnInit {
     private profileService: ProfileService,
     private accountService: AccountService,
     private route: ActivatedRoute,
-    // private location: Location,
-  ) {
-  }
+    private location: Location,
+    ) { }
 
   ngOnInit() {
     this.getProfile();
@@ -38,8 +37,17 @@ export class ProfileDetailComponent implements OnInit {
     this.profileService.getProfile(id).subscribe(profile => this.profile = profile);
   }
 
-  private getAccounts() {
+  private deleteProfile(id: number) {
+    this.profileService.deleteProfile(id).subscribe(profile => this.profile = profile);
+  }
+
+private getAccounts() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.accountService.getAccounts(id).subscribe(account => this.accounts = account);
+
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }
