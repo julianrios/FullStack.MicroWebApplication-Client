@@ -3,6 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {AccountsComponent} from '../accounts/accounts.component';
 import {AccountService} from '../accounts/account.service';
 import {ActivatedRoute, RouterLink} from '@angular/router';
+import {Account} from '../account'
 
 
 @Component({
