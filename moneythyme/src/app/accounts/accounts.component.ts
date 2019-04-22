@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AccountService} from './account.service';
+import {Profile} from '../profile';
+import {Account} from '../account';
 
 @Component({
   selector: 'app-accounts',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accounts.component.css']
 })
 export class AccountsComponent implements OnInit {
-
-  constructor() { }
+  account: Account;
+  accounts: Account[];
+  profile: Profile;
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
+    this.getAccounts();
+  }
+
+  private getAccounts() {
+    this.accountService.getAccounts(this.profile.id).subscribe(data => this.accounts = data);
   }
 
 }
