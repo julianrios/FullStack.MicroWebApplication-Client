@@ -7,14 +7,14 @@
       <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Profile name</th>
+        <th scope="col">Account Balance</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-      <tr *ngFor= "let accounts of accounts" routerLink="/profiles/{{profile.id}}">
-        <td>{{profile.id}}</td>
-        <td>{{profile.name}}</td>
+      <tr *ngFor= "let account of accounts" routerLink="profiles/accounts/{{profile.id}}">
+        <td>{{account.id}}</td>
+        <td>{{account.balance}}</td>
       </tr>
     </table>
   </div>
