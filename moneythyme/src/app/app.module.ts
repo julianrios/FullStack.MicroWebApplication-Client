@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { AccountComponent } from './account/account.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AccountsComponent } from './accounts/accounts.component';
     AboutComponent,
     ProfileDetailComponent,
     AccountDetailsComponent,
-    AccountsComponent
+    AccountsComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
