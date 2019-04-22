@@ -16,7 +16,7 @@ export class AccountService {
   }
 
   getAccounts(profile_id: number): Observable<Account[]>{
-    const url = `${this.profileUrl}/${profile_id}`
+    const url = `${this.profileUrl}/all/${profile_id}`
     return this.http.get<Account[]>(url);
   }
 }
