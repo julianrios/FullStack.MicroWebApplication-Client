@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {ProfileComponent} from './profile/profile.component';
 import {AboutComponent} from './about/about.component';
 import {NavbarComponent} from './navbar/navbar.component';
-import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
-import { AccountDetailsComponent } from './account-details/account-details.component';
+import {ProfileDetailComponent} from './profile-detail/profile-detail.component';
+import {AccountDetailsComponent} from './account-details/account-details.component';
 
 const routes: Routes = [
   {path: 'profiles', component: ProfileComponent},
@@ -18,4 +18,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
