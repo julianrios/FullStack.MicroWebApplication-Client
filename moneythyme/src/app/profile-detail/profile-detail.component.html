@@ -1,5 +1,5 @@
 <div *ngIf= "profile">
-  <h2>{{profile.name}} Details</h2>
+  <h2>Profile: {{profile.name}}</h2>
   <div><span>Profile ID:</span>{{profile.id}}</div>
   <div class="container">
     <h2 class=display-4>Accounts</h2>
@@ -12,12 +12,12 @@
       </thead>
       <tbody>
       <tr>
-      <tr *ngFor= "let account of accounts">
+      <tr *ngFor= "let account of accounts" routerLink="/accounts/{{account.id}}">
         <td>{{account.id}}</td>
         <td>{{account.balance}}</td>
       </tr>
     </table>
   </div>
 
-  <button routerLink="/profiles">go back</button>
+  <button type="button" class="btn btn-primary" routerLink="/profiles">go back</button>
 </div>

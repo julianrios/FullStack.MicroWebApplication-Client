@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Profile } from '../profile';
-import { ProfileService } from '../profile/profile.service';
+import { ProfileService } from '../services/profile.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
-import { Account} from '../account';
-import { AccountService} from '../accounts/account.service';
+import { Account } from '../account';
+import { AccountService} from '../services/account.service';
 
 
 @Component({

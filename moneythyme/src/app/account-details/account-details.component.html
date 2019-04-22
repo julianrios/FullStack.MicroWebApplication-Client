@@ -1,6 +1,6 @@
-<div *ngIf= "accounts">
-  <h2>{{accounts.id}} Details</h2>
-  <div><span>id:</span>{{accounts.id}}</div>
-  <div><span>balance:</span>{{accounts.balance}}</div>
-  <button routerLink="/profiles">go back</button>
+<div *ngIf= "account">
+  <h2>{{account.id}} Details</h2>
+  <div><span>id:</span>{{account.id}}</div>
+  <div><span>balance:</span>{{account.balance}}</div>
+  <button type="button" class="btn btn-primary" routerLink="/profiles">go back</button>
 </div>
