@@ -48,7 +48,7 @@ private getAccounts() {
   }
 
   goBack(): void {
-    
+    this.location.back();
   }
 
   createAccount(balance: number) {
