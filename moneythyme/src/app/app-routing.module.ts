@@ -15,7 +15,8 @@ const routes: Routes = [
   {path: 'accounts/:id', component: AccountDetailsComponent},
   {path: 'accounts/:profile_id', component: AccountDetailsComponent},
   {path: 'home', component: HomepageComponent},
-  {path: 'safe-delete', component: SafeDeleteComponent}
+  {path: 'safe-delete', component: SafeDeleteComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
