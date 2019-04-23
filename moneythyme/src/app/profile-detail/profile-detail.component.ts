@@ -50,4 +50,10 @@ private getAccounts() {
   goBack(): void {
     this.location.back();
   }
+
+  createAccount(balance: number) {
+    console.log(balance);
+    const profileID = +this.route.snapshot.paramMap.get('id');
+    this.accountService.createAccount({profileID, balance} as Account).subscribe(account => {this.accounts.push(account); });
+  }
 }

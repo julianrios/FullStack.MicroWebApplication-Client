@@ -32,13 +32,20 @@ export class AccountService {
     return this.http.put<Account>(url, []);
   }
 
-  transfer(idFrom: number, idTo: number, amount: number):Observable<Account[]>{
+
+  transfer(idFrom: number, idTo: number, amount: number):Observable<Account[]> {
     const url = `${this.accountUrl}/transfer/${idTo}/${idFrom}/${amount}`;
-    return this.http.put<Account[]>(url,[]);
+    return this.http.put<Account[]>(url, []);
+  }
+
+  createAccount(account: Account): Observable<Account> {
+    console.log('entered service');
+    console.log(account);
+    return this.http.post<Account>(this.accountUrl, account);
   }
 
   deleteAccount(id: number): Observable<Account> {
-    const url = `${this.accountUrl}/${id}`
+    const url = `${this.accountUrl}/${id}`;
     return this.http.delete<Account>(url);
   }
 }

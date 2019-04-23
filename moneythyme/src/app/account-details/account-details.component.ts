@@ -59,7 +59,6 @@ export class AccountDetailsComponent implements OnInit {
     this.accountService.transfer(id, accountToId, amount).subscribe(accounts => this.activeAccounts = accounts);
     this.account = this.activeAccounts[1];
   }
-
   goBack(): void {
     this.location.back();
   }
@@ -67,5 +66,4 @@ export class AccountDetailsComponent implements OnInit {
   public deleteAccount(id: number) {
     this.accountService.deleteAccount(id).subscribe(account => this.account = account);
   }
-
 }
