@@ -38,4 +38,5 @@ export class AccountDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.accountService.withdraw(id, amount).subscribe(account => this.account = account);
   }
+
 }

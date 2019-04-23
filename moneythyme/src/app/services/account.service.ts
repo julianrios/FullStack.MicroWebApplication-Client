@@ -31,4 +31,10 @@ export class AccountService {
     const url = `${this.accountUrl}/withdraw/${id}/${amount}`;
     return this.http.put<Account>(url, []);
   }
+
+  createAccount(account: Account): Observable<Account> {
+    console.log('entered service');
+    console.log(account);
+    return this.http.post<Account>(this.accountUrl, account);
+  }
 }
