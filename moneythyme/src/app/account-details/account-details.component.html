@@ -32,12 +32,22 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card text-white border-primary mb-3" style="max-width: 20rem;">
           <div class="card-header bg-primary">Transfer</div>
           <div class="card-body">
-            <h4 class="card-title">Transfer how much?</h4>
+            <h4 class="card-title text-primary">Transfer how much?</h4>
             <div class="form-group">
               <input class="form-control form-control-sm" type="number" placeholder="Transfer" id="transferAmount">
+              <div class="form-group">
+                <label class="text-primary" for="accountSelect">Transfer to which account number?</label>
+                <select class="form-control" id="accountSelect" (click)="getThisProfileAccounts()">
+                  <option *ngFor= "let acc of accounts"
+                    [value]="acc.id">
+                    {{acc.id}}
+                  </option>
+                </select>
+                <button class="btn btn-primary btn-md" >Do it!</button>
+              </div>
             </div>
           </div>
         </div>
@@ -51,4 +61,3 @@
     <button class="btn btn-danger btn-lg" (click)= "deleteAccount(account.id)" (click)="goBack()" >delete</button>
   </p>
 </div>
-

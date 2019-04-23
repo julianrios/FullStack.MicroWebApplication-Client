@@ -32,8 +32,14 @@ export class AccountService {
     return this.http.put<Account>(url, []);
   }
 
+  createAccount(account: Account): Observable<Account> {
+    console.log('entered service');
+    console.log(account);
+    return this.http.post<Account>(this.accountUrl, account);
+  }
+
   deleteAccount(id: number): Observable<Account> {
-    const url = `${this.accountUrl}/${id}`
+    const url = `${this.accountUrl}/${id}`;
     return this.http.delete<Account>(url);
   }
 }

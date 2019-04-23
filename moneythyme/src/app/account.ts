@@ -1,5 +1,5 @@
 export class Account {
   id: number;
-  profile_id: number;
+  profileID: number;
   balance: number;
 }

@@ -1,10 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 import {AccountService} from '../services/account.service';
+import {ProfileService} from '../services/profile.service';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Account} from '../account';
 import {Profile} from '../profile';
+import {ProfileDetailComponent} from '../profile-detail/profile-detail.component'
 import {Location} from '@angular/common';
+
 
 
 @Component({
@@ -13,12 +16,17 @@ import {Location} from '@angular/common';
   styleUrls: ['./account-details.component.css']
 })
 export class AccountDetailsComponent implements OnInit {
-  @Input() account: Account;
+  account: Account;
+  accounts: Account[];
+  profile: Profile;
 
   constructor(
     private accountService: AccountService,
+
+    private profileService: ProfileService,
     private route: ActivatedRoute,
     private location: Location,
+
   ) {
   }
 
@@ -31,6 +39,10 @@ export class AccountDetailsComponent implements OnInit {
     this.accountService.getAccount(id).subscribe(account => this.account = account);
   }
 
+  public getThisProfileAccounts() {
+    this.accountService.getAccounts(this.account.profileID).subscribe(accounts => this.accounts = accounts);
+  }
+
   public deposit(amount: number) {
     const id = +this.route.snapshot.paramMap.get('id');
     this.accountService.deposit(id, amount).subscribe(account => this.account = account);
@@ -40,7 +52,6 @@ export class AccountDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.accountService.withdraw(id, amount).subscribe(account => this.account = account);
   }
-
   goBack(): void {
     this.location.back();
   }
@@ -48,5 +59,4 @@ export class AccountDetailsComponent implements OnInit {
   public deleteAccount(id: number) {
     this.accountService.deleteAccount(id).subscribe(account => this.account = account);
   }
-
 }
