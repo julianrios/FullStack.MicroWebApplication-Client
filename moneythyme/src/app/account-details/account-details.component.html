@@ -1,7 +1,7 @@
 <div class="container" *ngIf="account">
   <div class="jumbotron">
     <h1 class="display-3">Account Number {{account.id}}:</h1>
-    <p class="lead">Account balance is: ${{account.balance}}</p>
+    <p class="lead">Account balance is: ${{account.balance.toFixed(2)}}</p>
     <hr class="my-4">
     <p>Here you can withdraw from, and deposit to your account.</p>
 
