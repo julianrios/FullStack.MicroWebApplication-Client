@@ -31,4 +31,9 @@ export class AccountService {
     const url = `${this.accountUrl}/withdraw/${id}/${amount}`;
     return this.http.put<Account>(url, []);
   }
+
+  deleteAccount(id: number): Observable<Account> {
+    const url = `${this.accountUrl}/${id}`
+    return this.http.delete<Account>(url);
+  }
 }

@@ -13,6 +13,7 @@ import {AccountDetailsComponent} from './account-details/account-details.compone
 import {AccountsComponent} from './accounts/accounts.component';
 import {AccountComponent} from './account/account.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { SafeDeleteComponent } from './safe-delete/safe-delete.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     AccountDetailsComponent,
     AccountsComponent,
     AccountComponent,
-    HomepageComponent
+    HomepageComponent,
+    SafeDeleteComponent
   ],
   imports: [
     BrowserModule,

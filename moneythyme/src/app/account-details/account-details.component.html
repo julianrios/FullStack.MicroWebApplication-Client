@@ -54,8 +54,11 @@
       </div>
     </div>
   </div>
+  <div *ngFor= "let account of accounts" routerLink="/accounts/{{account.id}}">
+  </div>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" routerLink="/profiles" role="button">Go Back to Profiles</a>
+    <a class="btn btn-primary btn-lg" routerLink="/profiles" role="button" >Go Back to Profiles</a>
+    <button class="btn btn-danger btn-lg" (click)= "deleteAccount(account.id)" (click)="goBack()" >delete</button>
   </p>
 </div>
 
