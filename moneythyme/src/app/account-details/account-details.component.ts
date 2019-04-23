@@ -52,7 +52,6 @@ export class AccountDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.accountService.withdraw(id, amount).subscribe(account => this.account = account);
   }
-
   goBack(): void {
     this.location.back();
   }
@@ -60,5 +59,4 @@ export class AccountDetailsComponent implements OnInit {
   public deleteAccount(id: number) {
     this.accountService.deleteAccount(id).subscribe(account => this.account = account);
   }
-
 }
