@@ -19,6 +19,7 @@ export class AccountDetailsComponent implements OnInit {
   account: Account;
   accounts: Account[];
   profile: Profile;
+  activeAccounts: Account[];
 
   constructor(
     private accountService: AccountService,
@@ -51,6 +52,12 @@ export class AccountDetailsComponent implements OnInit {
   public withdraw(amount: number) {
     const id = +this.route.snapshot.paramMap.get('id');
     this.accountService.withdraw(id, amount).subscribe(account => this.account = account);
+  }
+
+  public transfer(accountToId: number, amount: number){
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.accountService.transfer(id, accountToId, amount).subscribe(accounts => this.activeAccounts = accounts);
+    this.account = this.activeAccounts[1];
   }
 
   goBack(): void {
