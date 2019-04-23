@@ -12,7 +12,7 @@
       <tr>
       <tr *ngFor= "let account of accounts" routerLink="/accounts/{{account.id}}">
         <td>{{account.id}}</td>
-        <td>{{account.balance}}</td>
+        <td>{{account.balance.toFixed(2)}}</td>
       </tr>
     </table>
   </div>
