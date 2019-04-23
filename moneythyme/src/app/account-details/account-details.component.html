@@ -1,7 +1,7 @@
 <div class="container" *ngIf="account">
   <div class="jumbotron">
     <h1 class="display-3">Account Number {{account.id}}:</h1>
-    <p class="lead">Account balance is: {{account.balance}}</p>
+    <p class="lead">Account balance is: ${{account.balance}}</p>
     <hr class="my-4">
     <p>Here you can withdraw from, and deposit to your account.</p>
 
@@ -24,7 +24,7 @@
           <div class="card-body">
             <h4 class="card-title">Withdraw how much?</h4>
             <div class="form-group">
-              <input class="form-control form-control-sm" type="number" placeholder="Withdraw" id="withdrawAmount"
+              <input class="form-control form-control-sm" type="number" placeholder=0 id="withdrawAmount"
                      #withdrawAmount>
             </div>
             <button class="btn btn-secondary btn-md" (click)="withdraw(withdrawAmount.value)">Do it!</button>
