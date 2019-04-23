@@ -21,6 +21,6 @@
   <div *ngFor= "let profile of profiles">
   </div>
     <button class="delete btn btn-danger" title="delete hero" 
-    (click)="deleteProfile(profile.id)">Delete</button>
+    (click)="deleteProfile(profile.id) (click)="goBack()">Delete</button>
   <button type="button" class="btn btn-primary" (click)="goBack()">back</button>
 </div>
