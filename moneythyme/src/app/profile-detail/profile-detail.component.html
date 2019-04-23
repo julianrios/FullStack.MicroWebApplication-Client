@@ -1,8 +1,6 @@
 <div *ngIf= "profile">
-  <h2>Profile: {{profile.name}}</h2>
-  <div><span>Profile ID:</span>{{profile.id}}</div>
   <div class="container">
-    <h2 class=display-4>Accounts</h2>
+    <h2 class=display-4>Accounts of {{profile.name}}</h2>
     <table class="table table-hover table-striped">
       <thead>
       <tr>
@@ -26,7 +24,8 @@
     <button type="button" class="btn btn-primary" (click)="createAccount(balance.valueAsNumber)">Submit</button>
   </div>
     <button (click)="goBack()">go back</button>
-    <button class="delete" title="delete hero" 
+    <button class="delete" title="delete hero"></button>
+    <button class="delete btn btn-danger" title="delete hero">
     (click)="deleteProfile(profile.id)">Delete</button>
-  <button type="button" class="btn btn-primary" routerLink="/profiles">go back</button>
+  <button type="button" class="btn btn-primary" (click)="goBack()">back</button>
 </div>

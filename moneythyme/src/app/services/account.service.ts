@@ -37,4 +37,9 @@ export class AccountService {
     console.log(account);
     return this.http.post<Account>(this.accountUrl, account);
   }
+
+  deleteAccount(id: number): Observable<Account> {
+    const url = `${this.accountUrl}/${id}`;
+    return this.http.delete<Account>(url);
+  }
 }
