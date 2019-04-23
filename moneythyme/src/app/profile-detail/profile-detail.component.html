@@ -21,7 +21,7 @@
   <div *ngFor= "let profile of profiles">
   </div>
     <button (click)="goBack()">go back</button>
-    <button class="delete" title="delete hero" 
+    <button class="delete btn btn-danger" title="delete hero" 
     (click)="deleteProfile(profile.id)">Delete</button>
   <button type="button" class="btn btn-primary" routerLink="/profiles">go back</button>
 </div>
