@@ -12,6 +12,7 @@ import {ProfileDetailComponent} from './profile-detail/profile-detail.component'
 import {AccountDetailsComponent} from './account-details/account-details.component';
 import {AccountsComponent} from './accounts/accounts.component';
 import {AccountComponent} from './account/account.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {AccountComponent} from './account/account.component';
     ProfileDetailComponent,
     AccountDetailsComponent,
     AccountsComponent,
-    AccountComponent
+    AccountComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
