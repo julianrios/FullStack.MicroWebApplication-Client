@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1 class="display-3">Welcome To MoneyThyme!</h1>
+  <p class="lead">Please create an account if you do not have one, otherwise please go to the Profiles tab to access your existing account.</p>
+  <hr class="my-4">
+  <div class="form-group">
+    <h3>Please input your name to create a profile!</h3>
+
+<!--    <label class="col-form-label col-form-label-lg" for="profileInput"></label>-->
+    <input class="form-control form-control-lg" type="text" placeholder="Your Name Here!" id="profileInput" #profileInput>
+    <button type="button" class="btn btn-primary btn-lg" (click)="createProfile(profileInput.value)">Submit</button>
+  </div>
+</div>
