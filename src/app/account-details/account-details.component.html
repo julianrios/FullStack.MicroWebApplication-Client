@@ -14,7 +14,7 @@
             <div class="form-group">
               <input class="form-control form-control-sm" type="number" placeholder=0 id="depositAmount" #depositAmount>
             </div>
-            <button class="btn btn-success btn-md" (click)="deposit(depositAmount.value)">Do it!</button>
+            <button class="btn btn-success btn-md" (click)="deposit(depositAmount.value)">Deposit</button>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
               <input class="form-control form-control-sm" type="number" placeholder=0 id="withdrawAmount"
                      #withdrawAmount>
             </div>
-            <button class="btn btn-secondary btn-md" (click)="withdraw(withdrawAmount.value)">Do it!</button>
+            <button class="btn btn-secondary btn-md" (click)="withdraw(withdrawAmount.value)">Withdraw</button>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
                   </option>
                 </select>
                 <div style="margin: 1em 0em">
-                <button class="btn btn-primary btn-md" (click)="transfer(idTo.value,transferAmount.value)">Do it!</button>
+                <button class="btn btn-primary btn-md" (click)="transfer(idTo.value,transferAmount.value)">Transfer</button>
                 </div>
               </div>
             </div>
@@ -60,6 +60,6 @@
   </div>
   <p class="lead">
     <a class="btn btn-primary btn-lg" routerLink="/profiles/{{account.profileID}}" role="button" >Go Back to Accounts</a>
-    <button class="btn btn-danger btn-lg" (click)= "deleteAccount(account.id)" (click)="goBack()" >Delete</button>
+    <button class="btn btn-danger btn-lg" (click)= "deleteAccount(account.id)" routerLink="/safe-delete" >Delete Account</button>
   </p>
 </div>
