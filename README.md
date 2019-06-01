@@ -37,6 +37,6 @@ MoneyThyme is compatible with devices of all sizes and all OS's, and consistent 
 - Add code documentation
 - Add feature for history of transactions
 
-## [License](https://github.com/julianrios/MoneyThyme-Client/master/LICENSE.md)
+## [License](https://github.com/julianrios/MoneyThyme-Client/blob/master/LICENSE.md)
 
 MIT © [Julian Rios](https://github.com/julianrios) 
