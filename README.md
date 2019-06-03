@@ -1,4 +1,4 @@
-# ![Landing Page MoneyThyme](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Landing-Section.png) 
+# ![Landing Page MoneyThyme](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Landing-Section-Updated.png) 
 # Moneythyme
 <table>
 <tr>
@@ -16,17 +16,17 @@ Go here for a live demo : https://moneythymeweb.herokuapp.com/home
 ## Site
 
 ### Profiles Page
-# ![Profiles Page](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Profiles-Section.png)
+# ![Profiles Page](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Profiles-Section-Updated.png)
 
 ### Account Page
-# ![Account Page](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Account-Section.png)
+# ![Account Page](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Account-Section-Updated.png)
 
 ### Account Details
-# ![Account Details](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Account-Details.png)
+# ![Account Details](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Account-Details-Updated.png)
 
 ### Mobile Support
 MoneyThyme is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
-# ![Mobile Landing Section](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Mobile-Profile-Section.png)
+# ![Mobile Landing Section](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Mobile-Landing-Section-Updated.png)
 # ![Mobile Profile Section](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Mobile-Profile-Section.png)
 
 ## Built With
