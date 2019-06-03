@@ -26,6 +26,7 @@ Go here for a live demo : https://moneythymeweb.herokuapp.com/home
 
 ### Mobile Support
 MoneyThyme is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
+# ![Mobile Landing Section](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Mobile-Profile-Section.png)
 # ![Mobile Profile Section](https://raw.githubusercontent.com/julianrios/MoneyThyme-Client/master/src/assets/images/Mobile-Profile-Section.png)
 
 ## Built With
